@@ -13,7 +13,9 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat4"
         app:layout_constraintTop_toTopOf="parent"
-        app:neumorph_shapeType="pressed">
+        app:layout_constraintVertical_bias="0.0"
+        app:neumorph_shapeType="pressed"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
             android:id="@+id/input"
@@ -29,17 +31,6 @@
             tools:ignore="LabelFor,RtlCompat" />
 
 
-        <soup.neumorphism.NeumorphFloatingActionButton
-            android:id="@+id/hapusBTN"
-            style="@style/Widget.Neumorph.Button"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom|end"
-            android:hapticFeedbackEnabled="true"
-            android:onClick="hapusBTN"
-            android:src="@drawable/backspace_24"
-            android:text=" " />
-
     </soup.neumorphism.NeumorphCardView>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -51,19 +42,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
-        <soup.neumorphism.NeumorphButton
-            android:id="@+id/clearBTN"
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/hapusBTN"
             style="@style/Widget.Neumorph.Button"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:scaleType="centerInside"
             android:hapticFeedbackEnabled="true"
-            android:onClick="clearBTN"
-            android:padding="0dp"
-            android:text="C"
-            android:textColor="#FF0000"
-            android:textSize="38sp" />
+            android:src = "@drawable/backspace_24"
+            android:padding="0dp"/>
 
         <soup.neumorphism.NeumorphButton
             android:id="@+id/nolBTN"

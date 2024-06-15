@@ -7,6 +7,7 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.EditText;
 import org.mariuszgromada.math.mxparser.*;
+import soup.neumorphism.NeumorphImageButton;
 
 public class calculatorActivity extends AppCompatActivity {
     private EditText display;
@@ -19,6 +20,23 @@ public class calculatorActivity extends AppCompatActivity {
 
         display = findViewById(R.id.input);
         display.setShowSoftInputOnFocus(false);
+
+        NeumorphImageButton hapusBTN = findViewById(R.id.hapusBTN);
+
+        hapusBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hapusBTN(view);
+            }
+        });
+
+        hapusBTN.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                clearBTN(view);
+                return true; // return true to indicate the long click event was handled
+            }
+        });
     }
 
     private void updateText(String strToAdd){
