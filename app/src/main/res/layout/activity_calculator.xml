@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEAEA"
+    tools:context=".calculatorActivity">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardView"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:neumorph_shapeType="pressed">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:autofillHints="false"
+            android:background="@null"
+            android:inputType="none"
+            android:textAlignment="textEnd"
+            android:textCursorDrawable="@null"
+            android:textSize="45sp"
+            tools:ignore="LabelFor,RtlCompat" />
+
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/hapusBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|end"
+            android:hapticFeedbackEnabled="true"
+            android:onClick="hapusBTN"
+            android:src="@drawable/backspace_24"
+            android:text=" " />
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="clearBTN"
+            android:id="@+id/clearBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="C"
+            android:textColor="#FF0000"
+            android:textSize="38sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="nolBTN"
+            android:id="@+id/nolBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"    
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="pointBTN"
+            android:id="@+id/pointBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="."
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="equalBTN"
+            android:id="@+id/equalBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="="
+            android:textSize="40sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat">
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="satuBTN"
+            android:id="@+id/satuBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="duaBTN"
+            android:id="@+id/duaBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="tigaBTN"
+            android:id="@+id/tigaBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="tambahBTN"
+            android:id="@+id/tambahBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="40sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat1">
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="empatBTN"
+            android:id="@+id/empatBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="4"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="limaBTN"
+            android:id="@+id/limaBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="5"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="enamBTN"
+            android:id="@+id/enamBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="6"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="kurangBTN"
+            android:id="@+id/kurangBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="40sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat2">
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="tujuhBTN"
+            android:id="@+id/tujuhBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="7"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="delapanBTN"
+            android:id="@+id/delapanBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="8"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="sembilanBTN"
+            android:id="@+id/sembilanBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="9"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="kaliBTN"
+            android:id="@+id/kaliBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="×"
+            android:textSize="40sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat3">
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="kurungBukaBTN"
+            android:id="@+id/kurungBukaBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="("
+            android:textSize="37dp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="kurungTutupBTN"
+            android:id="@+id/kurungTutupBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=")"
+            android:textSize="37dp"/>
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="pangkatBTN"
+            android:id="@+id/pangkatBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="^"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphButton
+            android:onClick="bagiBTN"
+            android:id="@+id/bagiBTN"
+            style="@style/Widget.Neumorph.Button"
+            android:hapticFeedbackEnabled="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="÷"
+            android:textSize="40sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

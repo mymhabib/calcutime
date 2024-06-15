@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#EDEAEA">
+
+    <soup.neumorphism.NeumorphTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CalcuTime"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/neumorphCardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardView3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:neumorph_shapeType="pressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/buttonCalculator"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/calculate_24"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/calculatorText"
+                app:layout_constraintBottom_toTopOf="@+id/buttonTimer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/buttonTimer"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/timer_24"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/timer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCalculator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
